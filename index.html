@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Simple Website in HTML AND CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <!--Header start-->
+        <header>
+            <nav class="nav container">
+            <h2 class="nav_logo"><a href="#">Coding</a></h2>
+            <ul class="menu_items">
+                <img src="images/times.svg" alt="timesIcon" id="menu_toggle">
+                <li><a href="#" class="nav_link">Home</a></li>
+                <li><a href="#" class="nav_link">About</a></li>
+                <li><a href="#" class="nav_link">Services</a></li>
+                <li><a href="#" class="nav_link">Project</a></li>
+                <li><a href="#" class="nav_link">Contact</a></li>
+            </ul>
+            <img src="images/bars.svg" alt="barsIcon" id="menu_toggle">
+        </nav>
+        </header>
+        <!--Header end-->
+
+        <!--Hero start-->
+        <section class="hero">
+            <div class="row">
+                <div class="column">
+                    <h2>Top free tool and extension to <br /> radiply grow you business</h2>
+                    <p>The customer is very important, the customer will be followed by the customer. It's a good idea to get free, for some reason. It's a lot of fun if you're not a developer, you've got a loan, but it's going to be a bad time. It is good that propaganda and wisdom will not be followed by arrows.</p>
+                    <div class="buttons">
+                        <button class="btn">Read More</button>
+                        <button class="btn">Contact Us</button>
+                    </div>
+                </div>
+                <div class="column">
+                    <img src="images/hero.png" alt="heroimg" class="hero_img">
+                </div>
+            </div>
+        </section>
+        <!--Hero end-->
+    </main>
+    <script>
+        const header = document.querySelector("header");
+        const menuToggler = document.querySelectorAll("#menu_toggle");
+
+
+        menuToggler.forEach(toggler => {
+            toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
+        })
+    </script>
+</body>
+</html>
